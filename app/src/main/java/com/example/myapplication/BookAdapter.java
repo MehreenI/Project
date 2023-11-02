@@ -13,7 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.ImageUpload;
 import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+
 import com.example.myapplication.R;
 
 
@@ -39,10 +43,13 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
 
         // Load the book details into the views
         holder.bookName.setText(book.getBookName());
-        holder.bookPrice.setText("Price: " + book.getBookPrice()+"/-");
+        holder.bookPrice.setText("Price: " + book.getBookPrice() + "/-");
 
         // Use Picasso to load the image from the URL
         Picasso.get().load(book.getImageUrl()).into(holder.bookImage);
+
+        // Set the date in the datetime TextView
+        holder.dateTime.setText(book.getUploadDate());
 
         // Set a click listener for the item
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +71,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         });
     }
 
+
     @Override
     public int getItemCount() {
         return bookList.size();
@@ -81,12 +89,13 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         ImageView bookImage;
         TextView bookName;
         TextView bookPrice;
-
+        TextView dateTime;
         public BookViewHolder(View itemView) {
             super(itemView);
             bookImage = itemView.findViewById(R.id.imageView);
             bookName = itemView.findViewById(R.id.bookname);
             bookPrice = itemView.findViewById(R.id.price);
+            dateTime = itemView.findViewById(R.id.datetime);
         }
     }
 }

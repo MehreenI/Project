@@ -19,7 +19,6 @@
         app:srcCompat="@drawable/add_24"
         tools:srcCompat="@drawable/add_24" />
 
-
     <TextView
         android:id="@+id/bookname"
         android:layout_width="wrap_content"
@@ -38,13 +37,12 @@
 
     <ImageView
         android:id="@+id/favorite"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
-
-        />
+        android:layout_marginEnd="48dp"
+        app:srcCompat="@drawable/star_outline_24" />
 
     <ImageView
         android:id="@+id/iconlocation"
@@ -56,18 +54,18 @@
         android:layout_marginEnd="10dp"
         android:layout_toEndOf="@+id/imageView"
         android:scaleType="fitCenter"
-        />
+        android:src="@drawable/location_on_24" />
 
     <TextView
         android:id="@+id/location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/iconlocation"
-        android:layout_alignBottom="@+id/iconlocation"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="8dp"
-        android:layout_toEndOf="@+id/iconlocation"
+        android:layout_below="@+id/iconlocation"
+        android:layout_alignStart="@+id/iconlocation"
+        android:layout_alignEnd="@+id/bookname"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="-22dp"
+        android:layout_marginEnd="-23dp"
         android:gravity="bottom"
         android:maxLines="1"
         android:text="Karachi"
@@ -78,28 +76,24 @@
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="bottom"
+        android:layout_below="@+id/bookname"
+        android:layout_alignStart="@+id/bookname"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="34dp"
         android:maxLines="1"
         android:text="price"
-        android:textAlignment="gravity"
         android:textColor="@color/theme"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/datetime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="8dp"
-        android:layout_toEndOf="@+id/imageView"
+        android:layout_below="@+id/price"
+        android:layout_alignStart="@+id/bookname"
+        android:layout_marginTop="2dp"
         android:maxLines="1"
         android:text="27-oct-2023"
         android:textSize="14sp" />
-
 </RelativeLayout>

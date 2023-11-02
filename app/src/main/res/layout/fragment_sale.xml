@@ -219,6 +219,34 @@
                 android:paddingEnd="10dp"
                 android:paddingBottom="20dp" />
 
+            <EditText
+                android:id="@+id/bookAuthorEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_corner"
+                android:backgroundTint="@color/background_sale"
+                android:hint="Author"
+                android:padding="15dp"
+                android:paddingStart="20dp"
+                android:paddingTop="120dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="20dp" />
+
+            <EditText
+                android:id="@+id/DescriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_corner"
+                android:backgroundTint="@color/background_sale"
+                android:hint="Book Description"
+                android:padding="15dp"
+                android:paddingStart="20dp"
+                android:paddingTop="120dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="20dp" />
+
             <Button
                 android:id="@+id/uploadData"
                 android:layout_width="match_parent"

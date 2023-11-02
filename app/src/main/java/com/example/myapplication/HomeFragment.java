@@ -53,8 +53,12 @@ public class HomeFragment extends Fragment {
         intent.putExtra("bookName", clickedItem.getBookName());
         intent.putExtra("bookPrice", clickedItem.getBookPrice());
         intent.putExtra("imageUrl", clickedItem.getImageUrl());
+        intent.putExtra("description", clickedItem.getDescription()); // Pass description
+        intent.putExtra("author", clickedItem.getAuthor()); // Pass author
+        intent.putExtra("condition", clickedItem.getCondition()); // Pass condition
         startActivity(intent);
     }
+
 
 
 
@@ -81,4 +85,5 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
 }

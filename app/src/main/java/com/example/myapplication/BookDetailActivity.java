@@ -21,15 +21,19 @@ public class BookDetailActivity extends AppCompatActivity {
         String bookPrice = intent.getStringExtra("bookPrice");
         String imageUrl = intent.getStringExtra("imageUrl");
 
+
         // Set the details in the layout elements
         ImageView bookDetailImage = findViewById(R.id.bookDetailImage);
         TextView bookDetailName = findViewById(R.id.bookDetailName);
         TextView bookDetailPrice = findViewById(R.id.bookDetailPrice);
+
+
 
         bookDetailName.setText(bookName);
         bookDetailPrice.setText("Rs: " +bookPrice+"/-");
 
         // Load the image into the ImageView (you can use Picasso or another image loading library)
         Picasso.get().load(imageUrl).into(bookDetailImage);
+
     }
 }
